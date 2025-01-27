@@ -87,7 +87,7 @@ button:hover {
 
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 120px;
+    width: 650px;
     background-color: #555;
     color: #fff;
     text-align: center;
@@ -154,45 +154,37 @@ button:hover {
     z-index: -1; /* Ensure it is behind other content */
 }
 
-.toggle-container {
+.toggle-label {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 5px;
+    position: absolute; /* Cambiar a posición absoluta */
+    top: 10px; /* Ajustar la distancia desde la parte superior */
+    right: 10px; /* Ajustar la distancia desde la derecha */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+}
+
+.toggle-label::after {
+    content: '◐'; /* Cambiar el contenido a 'OFF' */
     position: absolute;
-    top: 20px;
-    right: 50px;
-    background-color: #ccc; /* Add background color to the toggle container */
-    padding: 10px;
-    border-radius: 20px;
+    transition: content 0.3s;
 }
 
 .toggle-checkbox {
     display: none;
 }
 
-.toggle-label {
-    width: 60px;
-    height: 30px;
-    background-color: #ccc;
-    border-radius: 15px;
-    position: relative;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.toggle-label::after {
-    content: '';
-    width: 26px;
-    height: 26px;
-    background-color: white;
-    border-radius: 50%;
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s;
-}
-
 .toggle-checkbox:checked + .toggle-label {
-    background-color: #007BFF;
+    background-color: black;
 }
 
 .toggle-checkbox:checked + .toggle-label::after {
-    transform: translateX(30px);
+    content: '◑'; /* Cambiar el contenido a 'ON' */
 }

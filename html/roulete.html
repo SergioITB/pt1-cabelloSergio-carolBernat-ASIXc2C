@@ -7,9 +7,14 @@
     <link rel="stylesheet" href="../css/roulete.css">
 </head>
 <body>
+    <div class="confetti"></div>
     <div class="container">
-        <canvas id="ruleta" width="300" height="300"></canvas>
+        <canvas id="ruleta" width="600" height="600"></canvas>
         <div class="flecha">◀</div>
+    </div>
+    <div class="toggle-container">
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-label"></label>
     </div>
     <button id="girar">Girar Ruleta</button>
     <input type="file" id="cargarArchivo" accept=".txt">
@@ -17,7 +22,7 @@
     <!-- Primero se carga fileHandler.js -->
     <script src="../js/fileHandler.js"></script>
     <!-- Importar la librería de confetti -->
-    <script src="https://cdn.jsdelivr.net/npm   /canvas-confetti@1.5.1"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1"></script>
     <!-- Luego se carga roulete.js -->
     <script src="../js/roulete.js"></script>
 </body>

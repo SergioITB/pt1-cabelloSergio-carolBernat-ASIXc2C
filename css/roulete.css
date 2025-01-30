@@ -8,11 +8,24 @@ body {
     background-color: #f0f0f0;
 }
 
+.confetti {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../effects/confetti.gif') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Ensure it is behind other content */
+}
+
 .container {
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 600px;
+    height: 600px;
 }
 
 canvas {
@@ -28,7 +41,70 @@ canvas {
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
+    margin: 13px; /* 10px * 1.3 */
+    padding: 13px 26px; /* 10px 20px * 1.3 */
+    font-size: 21px; /* 16px * 1.3 */
+    cursor: pointer;
+    border: none;
+    border-radius: 6.5px; /* 5px * 1.3 */
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+input {
+    margin: 13px; /* 10px * 1.3 */
+    padding: 13px 26px; /* 10px 20px * 1.3 */
+    font-size: 21px; /* 16px * 1.3 */
+    cursor: pointer;
+    border: none;
+    border-radius: 6.5px; /* 5px * 1.3 */
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+input:hover {
+    background-color: #0056b3;
+}
+
+
+
+.toggle-label {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 5px;
+    position: absolute; /* Cambiar a posición absoluta */
+    top: 10px; /* Ajustar la distancia desde la parte superior */
+    right: 10px; /* Ajustar la distancia desde la derecha */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+}
+
+.toggle-label::after {
+    content: '◐'; /* Cambiar el contenido a 'OFF' */
+    position: absolute;
+    transition: content 0.3s;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: black;
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+    content: '◑'; /* Cambiar el contenido a 'ON' */
 }

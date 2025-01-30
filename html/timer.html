@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rellotge de Sorra</title>
+    <link rel="stylesheet" href="../css/timer.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Rellotge de Sorra</h1>
+        <div class="current-time" id="current-time"></div>
+        
+        <div class="alarm-settings">
+            <h2>Alarma</h2>
+            <label for="alarm-time">Hora de l'alarma:</label>
+            <input type="time" id="alarm-time">
+            <button id="start-alarm">Inicia l'alarma</button>
+        </div>
+        
+        <div class="countdown-settings">
+            <h2>Compte Enrere</h2>
+            <label for="countdown-duration">Duració del compte enrere (HH:MM:SS):</label>
+            <input type="text" id="countdown-duration" placeholder="01:16:00">
+            <button id="start-countdown">Inicia el compte enrere</button>
+        </div>
+        
+        <div class="countdown" id="countdown"></div>
+        
+        <div class="sound-settings">
+            <label for="sound">Selecciona el so:</label>
+            <select id="sound">
+                <option value="sound1.mp3">So 1</option>
+                <option value="sound2.mp3">So 2</option>
+                <option value="sound3.mp3">So 3</option>
+            </select>
+        </div>
+    </div>
+    <script src="../js/timer.js"></script>
+</body>
+</html>

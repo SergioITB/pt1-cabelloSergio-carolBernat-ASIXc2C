@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.current-time {
+    font-size: 2em;
+    margin: 20px 0;
+}
+
+.alarm-settings, .countdown-settings, .sound-settings {
+    margin: 20px 0;
+}
+
+input, select, button {
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 1em;
+}
+
+.countdown {
+    font-size: 2em;
+    margin: 20px 0;
+}

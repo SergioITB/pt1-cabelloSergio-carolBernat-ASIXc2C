@@ -15,14 +15,14 @@
             <h2>Alarma</h2>
             <label for="alarm-time">Hora de l'alarma:</label>
             <input type="time" id="alarm-time">
-            <button id="start-alarm">Inicia l'alarma</button>
+            <button id="start-alarm">Activa/Apaga</button>
         </div>
         
         <div class="countdown-settings">
             <h2>Compte Enrere</h2>
-            <label for="countdown-duration">Duració del compte enrere (HH:MM:SS):</label>
-            <input type="text" id="countdown-duration" placeholder="01:16:00">
-            <button id="start-countdown">Inicia el compte enrere</button>
+            <label for="countdown-duration">Compte enrere (HH:MM:SS):</label>
+            <input type="text" id="countdown-duration" placeholder="00:00:00">
+            <button id="start-countdown">Inicia</button>
         </div>
         
         <div class="countdown" id="countdown"></div>
@@ -30,11 +30,13 @@
         <div class="sound-settings">
             <label for="sound">Selecciona el so:</label>
             <select id="sound">
-                <option value="sound1.mp3">So 1</option>
-                <option value="sound2.mp3">So 2</option>
-                <option value="sound3.mp3">So 3</option>
+                <option value="../effects/alarma.mp3">Alarma</option>
+                <option value="../effects/reloj.mp3">Rellotge</option>
             </select>
         </div>
+        
+        <button id="stop-sound">Para el sonido</button>
+        <button id="clear-inputs">Limpiar</button>
     </div>
     <script src="../js/timer.js"></script>
 </body>

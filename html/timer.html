@@ -7,36 +7,53 @@
     <link rel="stylesheet" href="../css/timer.css">
 </head>
 <body>
+    <!-- Contenidor del toggle per canviar el color de fons -->
+    <div class="toggle-container">
+        <input type="checkbox" id="toggle" class="toggle-checkbox">
+        <label for="toggle" class="toggle-label"></label>
+    </div>
+    <!-- Contenidor del control de zoom -->
+    <div class="zoom-container">
+        <button id="zoom-in">+</button>
+        <button id="zoom-out">-</button>
+    </div>
     <div class="container">
+        <!-- Opcions de so -->
+        <div class="sound-settings">
+            <label for="sound">Selecciona el so:</label>
+            <br>
+            <select id="sound">
+                <option value="../effects/gall.mp3">Gall</option>
+                <option value="../effects/despertador.mp3">Despertador</option>
+                <option value="../effects/bomba.mp3">Bomba</option>
+            </select>
+        </div>
         <h1>Rellotge de Sorra</h1>
         <div class="current-time" id="current-time"></div>
         
-        <div class="alarm-settings">
-            <h2>Alarma</h2>
-            <label for="alarm-time">Hora de l'alarma:</label>
-            <input type="time" id="alarm-time">
-            <button id="start-alarm">Activa/Apaga</button>
-        </div>
-        
-        <div class="countdown-settings">
-            <h2>Compte Enrere</h2>
-            <label for="countdown-duration">Compte enrere (HH:MM:SS):</label>
-            <input type="text" id="countdown-duration" placeholder="00:00:00">
-            <button id="start-countdown">Inicia</button>
+        <div class="settings">
+            <!-- Configuració de l'alarma -->
+            <div class="alarm-settings">
+                <h2>Alarma</h2>
+                <input type="time" id="alarm-time">
+                <button id="start-alarm">Activar/Apagar</button>
+            </div>
+            
+            <!-- Configuració del compte enrere -->
+            <div class="countdown-settings">
+                <h2>Compte Enrere</h2>
+                <label for="countdown-duration"></label>
+                <input type="text" id="countdown-duration" placeholder="HH:MM:SS">
+                <button id="start-countdown">Iniciar</button>
+            </div>
         </div>
         
         <div class="countdown" id="countdown"></div>
         
-        <div class="sound-settings">
-            <label for="sound">Selecciona el so:</label>
-            <select id="sound">
-                <option value="../effects/alarma.mp3">Alarma</option>
-                <option value="../effects/reloj.mp3">Rellotge</option>
-            </select>
+        <div class="controls">
+            <button id="stop-sound">Parar el so</button>
+            <button id="clear-inputs">Netejar</button>
         </div>
-        
-        <button id="stop-sound">Para el sonido</button>
-        <button id="clear-inputs">Limpiar</button>
     </div>
     <script src="../js/timer.js"></script>
 </body>

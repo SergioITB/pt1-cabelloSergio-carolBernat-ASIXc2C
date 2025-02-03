@@ -1,41 +1,148 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita el desplaçament */
+}
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Orbitron', sans-serif; /* Font digital */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+    background-color: #111111; /* Fons clar */
+    color: #ff9900; /* Color ambre per als textos */
 }
 
 .container {
     text-align: center;
-    background: #fff;
+    background: #111; /* Fons fosc per al contenidor */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 15px rgba(255, 153, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: transform 0.3s; /* Transició suau per al zoom */
 }
 
-.current-time {
-    font-size: 2em;
+.current-time, .countdown {
+    font-size: 4em;
     margin: 20px 0;
+    color: #ff9900; /* Color ambre */
+    font-family: 'Orbitron', sans-serif;
+    text-shadow: 0 0 10px rgba(255, 153, 0, 0.8);
 }
 
-.alarm-settings, .countdown-settings, .sound-settings {
-    margin: 20px 0;
+.settings {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.alarm-settings, .countdown-settings {
+    margin: 0 10px;
+    color: #fff;
+}
+
+.sound-settings {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #fff;
+    font-size: 0.8em; /* Mida de font més petita per a les opcions de so */
+    padding-right: 20px; /* Afegeix padding a la dreta */
+}
+
+h1 {
+    padding-left: 20px; /* Afegeix padding a l'esquerra */
 }
 
 input, select, button {
     padding: 10px;
     margin: 10px 0;
-    font-size: 1em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
 }
 
-.countdown {
-    font-size: 2em;
-    margin: 20px 0;
+input, select {
+    background-color: #222;
+    color: #ff9900;
 }
 
-#start-alarm {
-    background-color: initial; /* Reset to default */
-    transition: background-color 0.3s ease; /* Smooth transition */
+#countdown-duration {
+    width: 150px; /* Redueix l'amplada de l'input de duració del compte enrere */
+}
+
+button {
+    background-color: #ff3300;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #cc2900;
+}
+
+.toggle-label {
+    width: 30px;
+    height: 30px;
+    background-color: blue;
+    border-radius: 5px;
+    position: absolute; /* Posició absoluta */
+    top: 10px; /* Distància des de la part superior */
+    right: 10px; /* Distància des de la dreta */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 45px;
+    color: white;
+}
+
+.toggle-label::after {
+    content: '◐'; /* Contingut inicial */
+    position: absolute;
+    transition: content 0.3s;
+}
+
+.toggle-checkbox {
+    display: none;
+}
+
+.toggle-checkbox:checked + .toggle-label {
+    background-color: rgb(0, 0, 0);
+}
+
+.toggle-checkbox:checked + .toggle-label::after {
+    content: '◑'; /* Contingut quan està activat */
+}
+
+/* Estils per al control de zoom */
+.zoom-container {
+    position: absolute;
+    top: 60px; /* Posició sota el toggle */
+    right: 10px; /* Distància des de la dreta */
+    display: flex;
+    flex-direction: column;
+}
+
+.zoom-container button {
+    background-color: #1400cc;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.zoom-container button:hover {
+    background-color: #05cdff;
 }

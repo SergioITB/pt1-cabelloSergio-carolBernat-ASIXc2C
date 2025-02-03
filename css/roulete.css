@@ -1,3 +1,20 @@
+#mainBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mainBtn:hover {
+    background: #0056b3;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -5,7 +22,7 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    background-color: #f0f0f0;
+    background-color: #000000;
 }
 
 .confetti {
@@ -37,6 +54,14 @@ canvas {
     position: absolute;
     right: -20px; /* Ajustar la posición de la flecha */
     font-size: 24px;
+    color: #000;
+}
+
+.flecha.blanca {
+    color: #fff;
+}
+
+.flecha.negra {
     color: #000;
 }
 
@@ -72,8 +97,6 @@ input:hover {
     background-color: #0056b3;
 }
 
-
-
 .toggle-label {
     width: 30px;
     height: 30px;
@@ -107,4 +130,60 @@ input:hover {
 
 .toggle-checkbox:checked + .toggle-label::after {
     content: '◑'; /* Cambiar el contenido a 'ON' */
+}
+
+#registro-ganadores {
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    width: 200px;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+#registro-ganadores h2 {
+    background: #333;
+    color: white;
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
+}
+
+#tabla-ganadores {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabla-ganadores th, #tabla-ganadores td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#tabla-ganadores th {
+    background-color: #333;
+    color: white;
+}
+
+#tabla-ganadores td {
+    background-color: #f9f9f9;
+}
+
+#reset {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#reset:hover {
+    background: darkred;
 }

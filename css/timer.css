@@ -146,3 +146,26 @@ button:hover {
 .zoom-container button:hover {
     background-color: #05cdff;
 }
+
+/* Estils per al selector de llengua */
+.language-selector {
+    position: absolute;
+    top: 10px;
+    right: 50px;
+}
+
+.language-selector button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.language-selector button:hover {
+    background-color: #0056b3;
+}

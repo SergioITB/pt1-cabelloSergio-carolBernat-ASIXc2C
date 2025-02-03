@@ -12,6 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const container = document.querySelector('.container'); // Obtenim el contenidor principal
     const zoomInButton = document.getElementById('zoom-in');
     const zoomOutButton = document.getElementById('zoom-out');
+    const esBtn = document.getElementById('esBtn');
+    const caBtn = document.getElementById('caBtn');
+    const title = document.getElementById('title');
+    const alarmTitle = document.getElementById('alarm-title');
+    const countdownTitle = document.getElementById('countdown-title');
+    const soundLabel = document.getElementById('sound-label');
 
     let alarmTimeout;
     let countdownInterval;
@@ -19,6 +25,29 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentSound;
     let alarmActive = false;
     let zoomLevel = 1;
+
+    const texts = {
+        es: {
+            title: 'Reloj de Arena',
+            alarmTitle: 'Alarma',
+            countdownTitle: 'Cuenta Atrás',
+            soundLabel: 'Selecciona el sonido:',
+            startAlarmButton: 'Activar/Apagar',
+            startCountdownButton: 'Iniciar',
+            stopSoundButton: 'Parar el sonido',
+            clearInputsButton: 'Limpiar'
+        },
+        ca: {
+            title: 'Rellotge de Sorra',
+            alarmTitle: 'Alarma',
+            countdownTitle: 'Compte Enrere',
+            soundLabel: 'Selecciona el so:',
+            startAlarmButton: 'Activar/Apagar',
+            startCountdownButton: 'Iniciar',
+            stopSoundButton: 'Parar el so',
+            clearInputsButton: 'Netejar'
+        }
+    };
 
     // Actualitza l'hora actual cada segon
     function updateCurrentTime() {
@@ -163,4 +192,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // Assigna els esdeveniments als botons de zoom
     zoomInButton.addEventListener('click', zoomIn);
     zoomOutButton.addEventListener('click', zoomOut);
+
+    // Funció per canviar l'idioma a espanyol
+    esBtn.addEventListener('click', () => {
+        title.textContent = texts.es.title;
+        alarmTitle.textContent = texts.es.alarmTitle;
+        countdownTitle.textContent = texts.es.countdownTitle;
+        soundLabel.textContent = texts.es.soundLabel;
+        startAlarmButton.textContent = texts.es.startAlarmButton;
+        startCountdownButton.textContent = texts.es.startCountdownButton;
+        stopSoundButton.textContent = texts.es.stopSoundButton;
+        clearInputsButton.textContent = texts.es.clearInputsButton;
+    });
+
+    // Funció per canviar l'idioma a català
+    caBtn.addEventListener('click', () => {
+        title.textContent = texts.ca.title;
+        alarmTitle.textContent = texts.ca.alarmTitle;
+        countdownTitle.textContent = texts.ca.countdownTitle;
+        soundLabel.textContent = texts.ca.soundLabel;
+        startAlarmButton.textContent = texts.ca.startAlarmButton;
+        startCountdownButton.textContent = texts.ca.startCountdownButton;
+        stopSoundButton.textContent = texts.ca.stopSoundButton;
+        clearInputsButton.textContent = texts.ca.clearInputsButton;
+    });
 });

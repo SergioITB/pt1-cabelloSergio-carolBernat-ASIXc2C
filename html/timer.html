@@ -17,10 +17,15 @@
         <button id="zoom-in">+</button>
         <button id="zoom-out">-</button>
     </div>
+    <!-- Contenidor del selector de llengua -->
+    <div class="language-selector">
+        <button id="esBtn">Español</button>
+        <button id="caBtn">Català</button>
+    </div>
     <div class="container">
         <!-- Opcions de so -->
         <div class="sound-settings">
-            <label for="sound">Selecciona el so:</label>
+            <label for="sound" id="sound-label">Selecciona el so:</label>
             <br>
             <select id="sound">
                 <option value="../effects/gall.mp3">Gall</option>
@@ -28,20 +33,20 @@
                 <option value="../effects/bomba.mp3">Bomba</option>
             </select>
         </div>
-        <h1>Rellotge de Sorra</h1>
+        <h1 id="title">Rellotge de Sorra</h1>
         <div class="current-time" id="current-time"></div>
         
         <div class="settings">
             <!-- Configuració de l'alarma -->
             <div class="alarm-settings">
-                <h2>Alarma</h2>
+                <h2 id="alarm-title">Alarma</h2>
                 <input type="time" id="alarm-time">
                 <button id="start-alarm">Activar/Apagar</button>
             </div>
             
             <!-- Configuració del compte enrere -->
             <div class="countdown-settings">
-                <h2>Compte Enrere</h2>
+                <h2 id="countdown-title">Compte Enrere</h2>
                 <label for="countdown-duration"></label>
                 <input type="text" id="countdown-duration" placeholder="HH:MM:SS">
                 <button id="start-countdown">Iniciar</button>

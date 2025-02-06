@@ -97,7 +97,7 @@ input:hover {
     background-color: #0056b3;
 }
 
-#fileInfo {
+.fileInfo {
     margin-top: 10px;
     font-size: 14px;
     color: #555;

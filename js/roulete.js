@@ -5,7 +5,6 @@ const girarBtn = document.getElementById('girar');
 const flecha = document.querySelector('.flecha');
 const listaGanadores = document.getElementById('lista-ganadores'); // 🔹 Elemento para mostrar los ganadores
 const resetBtn = document.getElementById('reset'); // Obtener el botón de reset
-const mainBtn = document.getElementById('mainBtn'); // Obtener el botón de main
 
 let nombres = []; // Lista de nombres cargados
 let numSecciones = 0;
@@ -79,6 +78,13 @@ function girarRuleta() {
         }
     }
     animar();
+    
+}
+function reproducirSonido() {
+    const audio = new Audio('../effects/winner.mp3');
+    audio.play().catch(err => {
+        console.error('Error al reproducir el sonido:', err);
+    });
 }
 
 // Determinar el ganador
@@ -92,7 +98,7 @@ function determinarGanador(anguloFinal) {
     // Reproducir sonido después de 500ms del confetti
     setTimeout(() => {
         reproducirSonido(); // Llamar a la función segura de reproducción
-    }, 500);
+    }, 50);
 
     // Esperar 1 segundo antes de mostrar el mensaje de ganador
     setTimeout(() => {

@@ -49,6 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // Event listener para el botón de main
+    mainBtn.addEventListener('click', function() {
+    window.location.href = 'index.html'; // Redirige a index.html
+    });
+
     // Actualitza l'hora actual cada segon
     function updateCurrentTime() {
         const now = new Date();
@@ -59,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function startAlarm() {
         if (alarmActive) {
             clearTimeout(alarmTimeout);
-            startAlarmButton.style.backgroundColor = 'initial';
+            startAlarmButton.style.backgroundColor = '#0011ff';
             alarmActive = false;
         } else {
             const alarmTimeValue = alarmTimeInput.value;
@@ -167,8 +172,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggle = document.getElementById('toggle');
     toggle.addEventListener('change', function() {
         if (this.checked) {
-            document.body.style.backgroundColor = '#ffebab';
-            container.style.backgroundColor = '#333'; // Canvia el color de fons del contenidor
+            document.body.style.backgroundColor = '#c1f7f2';
+            container.style.backgroundColor = '#6899b9'; // Canvia el color de fons del contenidor
         } else {
             document.body.style.backgroundColor = 'black';
             container.style.backgroundColor = '#111'; // Canvia el color de fons del contenidor

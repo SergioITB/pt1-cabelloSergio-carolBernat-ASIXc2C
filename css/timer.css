@@ -15,9 +15,32 @@ body {
     color: #ff9900; /* Color ambre per als textos */
 }
 
+.home-container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+#mainBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mainBtn:hover {
+    background: #0056b3; 
+}
+
 .container {
     text-align: center;
-    background: #111; /* Fons fosc per al contenidor */
+    background: #000000; /* Fons fosc per al contenidor */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 153, 0, 0.8);
@@ -78,8 +101,8 @@ input, select {
 }
 
 button {
-    background-color: #ff3300;
-    color: #fff;
+    background-color: #0011ff;
+    color: #ffffff;
     cursor: pointer;
     transition: background-color 0.3s;
 }

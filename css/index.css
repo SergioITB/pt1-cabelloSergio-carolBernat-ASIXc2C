@@ -117,8 +117,8 @@ button:hover {
 }
 
 .tooltip-right .tooltiptext {
-    top: 50%;
-    right: -450%; /* Position to the right */
+    top: 70%;
+    right: -448%; /* Position to the right */
     transform: translateY(-100%);
 }
 

@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Event listener per al botó de main
     mainBtn.addEventListener('click', function() {
-        window.location.href = 'index.html'; // Redirigeix a index.html
+        window.location.href = '../index.html'; // Redirigeix a index.html
     });
 
     // Funció per actualitzar l'hora actual cada segon

@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Textos per a diferents idiomes
     const texts = {
         es: {
-            title: 'Reloj de Arena',
+            title: 'Reloj Digital',
             alarmTitle: 'Alarma',
             countdownTitle: 'Cuenta Atrás',
             soundLabel: 'Selecciona el sonido:',
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clearInputsButton: 'Limpiar'
         },
         ca: {
-            title: 'Rellotge de Sorra',
+            title: 'Rellotge Digital',
             alarmTitle: 'Alarma',
             countdownTitle: 'Compte Enrere',
             soundLabel: 'Selecciona el so:',

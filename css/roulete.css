@@ -97,6 +97,16 @@ input:hover {
     background-color: #0056b3;
 }
 
+.info-block {
+    margin: 13px; /* 10px * 1.3 */
+    padding: 13px 26px; /* 10px 20px * 1.3 */
+    font-size: 21px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 6.5px; /* 5px * 1.3 */
+    text-align: center;
+}
 .toggle-label {
     width: 30px;
     height: 30px;

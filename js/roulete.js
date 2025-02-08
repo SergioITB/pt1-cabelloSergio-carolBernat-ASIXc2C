@@ -163,5 +163,5 @@ resetBtn.addEventListener('click', reset);
 
 // Event listener para el botón de main
 mainBtn.addEventListener('click', function() {
-    window.location.href = 'index.html'; // Redirige a index.html
+    window.location.href = '../index.html'; // Redirige a index.html
 });

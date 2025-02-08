@@ -12,7 +12,7 @@
         <canvas id="ruleta" width="600" height="600"></canvas>
         <div class="flecha blanca">◀</div>
     </div>
-    <div class="toggle-container">
+    <div class="toggle-container"> <!-- Cambiar Tema Dark a Light -->
         <input type="checkbox" id="toggle" class="toggle-checkbox">
         <label for="toggle" class="toggle-label"></label>
     </div>
@@ -30,9 +30,10 @@
         </table>
     </div>
     
-    <button id="girar">Girar Ruleta</button>
-    <input type="file" id="cargarArchivo" accept=".txt">
-    <button id="reset">Reset</button>
+    <button id="girar">Girar Ruleta</button> <!-- Botón para girar la ruleta -->
+    <input type="file" id="cargarArchivo" accept=".txt"> <!-- Botón para cargar archivo de nombres separados por ; -->
+    <div id="fileInfo" class="info-block">Solo se permiten archivos con nombres separados por ;</div>
+    <button id="reset">Reset</button> <!-- Botón para resetear la ruleta -->
     <button id="mainBtn">Main</button> <!-- Botón para volver al index -->
 
     <!-- Primero se carga fileHandler.js -->

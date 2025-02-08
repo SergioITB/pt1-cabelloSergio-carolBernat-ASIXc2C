@@ -1,3 +1,4 @@
+/* Estils generals per al body, que inclouen la font, el color de fons, el color del text, els marges i el padding */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -6,6 +7,7 @@ body {
     padding: 20px;
 }
 
+/* Estils per al contenidor principal del manual, que inclouen l'amplada màxima, el marge, el fons, el padding, les cantonades arrodonides i l'ombra */
 .manual-container {
     max-width: 800px;
     margin: 0 auto;
@@ -15,25 +17,30 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+/* Estils per al títol principal del manual, que inclouen l'alineació del text i el color */
 h1 {
     text-align: center;
     color: #007BFF;
 }
 
+/* Estils per als subtítols del manual, que inclouen el color */
 h2 {
     color: #0056b3;
 }
 
+/* Estils per a les llistes del manual, que inclouen l'eliminació del tipus de llista i el padding */
 ul {
     list-style-type: none;
     padding: 0;
 }
 
+/* Estils per als elements de la llista, que inclouen el marge i la mida de la font */
 ul li {
     margin: 10px 0;
     font-size: 1.1em;
 }
 
+/* Estils per als enllaços de tornada, que inclouen el display, l'alineació del text, el marge superior, la mida de la font, el color i la decoració del text */
 .back-link {
     display: block;
     text-align: center;
@@ -43,6 +50,7 @@ ul li {
     text-decoration: none;
 }
 
+/* Estils per als enllaços de tornada quan es passa el ratolí per sobre, que inclouen la decoració del text */
 .back-link:hover {
     text-decoration: underline;
 }

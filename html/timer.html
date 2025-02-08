@@ -4,63 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rellotge de Sorra</title>
-    <link rel="stylesheet" href="../css/timer.css">
+    <link rel="stylesheet" href="../css/timer.css"> <!-- Enllaç al fitxer CSS -->
 </head>
 <body>
-    <button id="mainBtn">Main</button> <!-- Botón para volver al index -->
+    <button id="mainBtn">Main</button> <!-- Botó per tornar a l'índex -->
+    
     <!-- Contenidor del toggle per canviar el color de fons -->
     <div class="toggle-container">
-        <input type="checkbox" id="toggle" class="toggle-checkbox">
-        <label for="toggle" class="toggle-label"></label>
+        <input type="checkbox" id="toggle" class="toggle-checkbox"> <!-- Checkbox per activar/desactivar el mode fosc -->
+        <label for="toggle" class="toggle-label"></label> <!-- Etiqueta per al toggle -->
     </div>
+    
     <!-- Contenidor del control de zoom -->
     <div class="zoom-container">
-        <button id="zoom-in">+</button>
-        <button id="zoom-out">-</button>
+        <button id="zoom-in">+</button> <!-- Botó per fer zoom in -->
+        <button id="zoom-out">-</button> <!-- Botó per fer zoom out -->
     </div>
+    
     <!-- Contenidor del selector de llengua -->
     <div class="language-selector">
-        <button id="esBtn">Español</button>
-        <button id="caBtn">Català</button>
+        <button id="esBtn">Español</button> <!-- Botó per canviar l'idioma a espanyol -->
+        <button id="caBtn">Català</button> <!-- Botó per canviar l'idioma a català -->
     </div>
+    
     <div class="container">
         <!-- Opcions de so -->
         <div class="sound-settings">
-            <label for="sound" id="sound-label">Selecciona el so:</label>
+            <label for="sound" id="sound-label">Selecciona el so:</label> <!-- Etiqueta per al selector de so -->
             <br>
-            <select id="sound">
+            <select id="sound"> <!-- Selector per triar el so de l'alarma -->
                 <option value="../effects/gall.mp3">Gall</option>
                 <option value="../effects/despertador.mp3">Despertador</option>
                 <option value="../effects/bomba.mp3">Bomba</option>
             </select>
         </div>
-        <h1 id="title">Rellotge Digital</h1>
-        <div class="current-time" id="current-time"></div>
+        
+        <h1 id="title">Rellotge Digital</h1> <!-- Títol de la pàgina -->
+        <div class="current-time" id="current-time"></div> <!-- Element per mostrar l'hora actual -->
         
         <div class="settings">
             <!-- Configuració de l'alarma -->
             <div class="alarm-settings">
-                <h2 id="alarm-title">Alarma</h2>
-                <input type="time" id="alarm-time">
-                <button id="start-alarm">Activar/Apagar</button>
+                <h2 id="alarm-title">Alarma</h2> <!-- Títol de la secció d'alarma -->
+                <input type="time" id="alarm-time"> <!-- Input per establir l'hora de l'alarma -->
+                <button id="start-alarm">Activar/Apagar</button> <!-- Botó per activar o desactivar l'alarma -->
             </div>
             
             <!-- Configuració del compte enrere -->
             <div class="countdown-settings">
-                <h2 id="countdown-title">Compte Enrere</h2>
-                <label for="countdown-duration"></label>
-                <input type="text" id="countdown-duration" placeholder="HH:MM:SS">
-                <button id="start-countdown">Iniciar</button>
+                <h2 id="countdown-title">Compte Enrere</h2> <!-- Títol de la secció de compte enrere -->
+                <label for="countdown-duration"></label> <!-- Etiqueta per a l'input de duració del compte enrere -->
+                <input type="text" id="countdown-duration" placeholder="HH:MM:SS"> <!-- Input per establir la duració del compte enrere -->
+                <button id="start-countdown">Iniciar</button> <!-- Botó per iniciar o aturar el compte enrere -->
             </div>
         </div>
         
-        <div class="countdown" id="countdown"></div>
+        <div class="countdown" id="countdown"></div> <!-- Element per mostrar el compte enrere -->
         
         <div class="controls">
-            <button id="stop-sound">Parar el so</button>
-            <button id="clear-inputs">Netejar</button>
+            <button id="stop-sound">Parar el so</button> <!-- Botó per parar el so de l'alarma -->
+            <button id="clear-inputs">Netejar</button> <!-- Botó per netejar els inputs -->
         </div>
     </div>
-    <script src="../js/timer.js"></script>
+    
+    <script src="../js/timer.js"></script> <!-- Enllaç al fitxer JavaScript -->
 </body>
 </html>

@@ -1,3 +1,4 @@
+/* Estils generals per a html i body */
 html, body {
     margin: 0;
     padding: 0;
@@ -6,6 +7,7 @@ html, body {
     overflow: hidden; /* Evita el desplaçament */
 }
 
+/* Estils per al body */
 body {
     font-family: 'Orbitron', sans-serif; /* Font digital */
     display: flex;
@@ -15,12 +17,14 @@ body {
     color: #ff9900; /* Color ambre per als textos */
 }
 
+/* Contenidor per al botó principal */
 .home-container {
     position: absolute;
     top: 10px;
     left: 10px;
 }
 
+/* Estils per al botó cap a index.html */
 #mainBtn {
     position: absolute;
     top: 10px;
@@ -34,10 +38,12 @@ body {
     cursor: pointer;
 }
 
+/* Estils per al botó cap a index.html quan es passa el ratolí per sobre */
 #mainBtn:hover {
-    background: #0056b3; 
+    background: #0056b3;
 }
 
+/* Estils per al contenidor principal */
 .container {
     text-align: center;
     background: #000000; /* Fons fosc per al contenidor */
@@ -51,6 +57,7 @@ body {
     transition: transform 0.3s; /* Transició suau per al zoom */
 }
 
+/* Estils per a l'hora actual i el compte enrere */
 .current-time, .countdown {
     font-size: 4em;
     margin: 20px 0;
@@ -59,17 +66,20 @@ body {
     text-shadow: 0 0 10px rgba(255, 153, 0, 0.8);
 }
 
+/* Estils per al contenidor de configuracions */
 .settings {
     display: flex;
     justify-content: space-around;
     width: 100%;
 }
 
+/* Estils per a les configuracions d'alarma i compte enrere */
 .alarm-settings, .countdown-settings {
     margin: 0 10px;
     color: #fff;
 }
 
+/* Estils per a les opcions de so */
 .sound-settings {
     position: absolute;
     top: 20px;
@@ -79,10 +89,12 @@ body {
     padding-right: 20px; /* Afegeix padding a la dreta */
 }
 
+/* Estils per al títol */
 h1 {
     padding-left: 20px; /* Afegeix padding a l'esquerra */
 }
 
+/* Estils per als inputs, selects i botons */
 input, select, button {
     padding: 10px;
     margin: 10px 0;
@@ -91,15 +103,18 @@ input, select, button {
     border-radius: 5px;
 }
 
+/* Estils per als inputs i selects */
 input, select {
     background-color: #222;
     color: #ff9900;
 }
 
+/* Estils específics per a l'input de duració del compte enrere */
 #countdown-duration {
     width: 150px; /* Redueix l'amplada de l'input de duració del compte enrere */
 }
 
+/* Estils per als botons */
 button {
     background-color: #0011ff;
     color: #ffffff;
@@ -107,10 +122,12 @@ button {
     transition: background-color 0.3s;
 }
 
+/* Estils per als botons quan es passa el ratolí per sobre */
 button:hover {
     background-color: #cc2900;
 }
 
+/* Estils per a l'etiqueta del toggle de mode fosc/clar */
 .toggle-label {
     width: 30px;
     height: 30px;
@@ -128,20 +145,24 @@ button:hover {
     color: white;
 }
 
+/* Contingut inicial de l'etiqueta del toggle */
 .toggle-label::after {
     content: '◐'; /* Contingut inicial */
     position: absolute;
     transition: content 0.3s;
 }
 
+/* Estils per al checkbox del toggle */
 .toggle-checkbox {
     display: none;
 }
 
+/* Estils per a l'etiqueta del toggle quan el checkbox està activat */
 .toggle-checkbox:checked + .toggle-label {
     background-color: rgb(0, 0, 0);
 }
 
+/* Contingut de l'etiqueta del toggle quan el checkbox està activat */
 .toggle-checkbox:checked + .toggle-label::after {
     content: '◑'; /* Contingut quan està activat */
 }
@@ -155,6 +176,7 @@ button:hover {
     flex-direction: column;
 }
 
+/* Estils per als botons de zoom */
 .zoom-container button {
     background-color: #1400cc;
     color: #fff;
@@ -166,6 +188,7 @@ button:hover {
     transition: background-color 0.3s;
 }
 
+/* Estils per als botons de zoom quan es passa el ratolí per sobre */
 .zoom-container button:hover {
     background-color: #05cdff;
 }
@@ -177,6 +200,7 @@ button:hover {
     right: 50px;
 }
 
+/* Estils per als botons del selector de llengua */
 .language-selector button {
     margin: 5px;
     padding: 10px 20px;
@@ -189,6 +213,7 @@ button:hover {
     transition: background-color 0.3s;
 }
 
+/* Estils per als botons del selector de llengua quan es passa el ratolí per sobre */
 .language-selector button:hover {
     background-color: #0056b3;
 }

@@ -122,9 +122,14 @@ button {
     transition: background-color 0.3s;
 }
 
-/* Estils per als botons quan es passa el ratolí per sobre */
+/* Estils per als botons quan es passa el ratolí per sobre per defecte*/
 button:hover {
-    background-color: #cc2900;
+    background-color: #2e93ff;
+}
+
+/* Estil pel botons d'activar/desactivar l'alarma quan es passa el ratolí per sobre, amb prihoritat */
+#start-alarm:hover, #start-countdown:hover {
+    background-color: #ff9900 !important;
 }
 
 /* Estils per a l'etiqueta del toggle de mode fosc/clar */

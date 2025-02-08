@@ -80,7 +80,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 const timeToAlarm = alarmTime - now; // Calculem el temps restant fins a l'alarma
 
                 if (timeToAlarm > 0) {
-                    alarmTimeout = setTimeout(() => playSound(soundSelect.value), timeToAlarm); // Establim un timeout per reproduir el so de l'alarma
+                    alarmTimeout = setTimeout(function() {
+                        playSound(soundSelect.value);
+                        startAlarmButton.style.backgroundColor = '#0011ff'; // Canvia el color del botó a blau quan l'alarma sona
+                        alarmActive = false; // Marca l'alarma com inactiva
+                    }, timeToAlarm); // Establim un timeout per reproduir el so de l'alarma
                     startAlarmButton.style.backgroundColor = 'red'; // Canvia el color del botó a vermell
                     alarmActive = true; // Marca l'alarma com activa
                 } else {
